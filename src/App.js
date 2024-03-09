@@ -1,23 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import DateCard from './Components/DateCard';
 
 function App() {
+  const Obj = [
+  {
+    Name: 'Nirma',
+    Month: 'Jun',
+    Date: 1,
+    Year: 2004
+  },{
+    Name : 'Surfexl',
+    Month: 'Nov',
+    Date: 10,
+    Year: 2204
+  },{
+    Name: 'Neem',
+    Month: 'Aug',
+    Date: 1,
+    Year: 20044
+  },{
+    Name: 'Clock',
+    Month: 'Oct',
+    Date: 123,
+    Year: 201204
+  }
+];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <DateCard AllValue={Obj}></DateCard>
     </div>
   );
 }
