@@ -27,7 +27,7 @@ function App() {
   }
 ];
   return (
-    <div>
+    <div className='realtive h-[100vh] w-[100vw] flex flex-row justify-center items-center'>
       <DateCard AllValue={Obj}></DateCard>
     </div>
   );
