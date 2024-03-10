@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export default function NewDate()
+export default function NewDate(Props)
 {
     const [Title, SetTitle] = useState('');
     const [Date, SetDate] = useState('');
@@ -19,8 +19,13 @@ export default function NewDate()
         Event.preventDefault();
         let Obj = {
             NewTitle: Title,
-            NewDate: Date
+            NewDate: Date   
         }
+
+        // Props.onCopy(Obj);
+
+        SetTitle("");
+        SetDate("");
 
         console.log(Obj);
         return Obj;
@@ -29,11 +34,11 @@ export default function NewDate()
         <form onSubmit={ObjReturnHandler} className="relative bg-green-400 p-5 w-fit rounded-md">
             <div>
                 <lable for="Title">Enter the Title = </lable>
-                <input id="Title" type="text" onChange={ChangeTitleHandler} className="border-2 border-black rounded-md"></input>
+                <input id="Title" type="text" onChange={ChangeTitleHandler} value={Title} className="border-2 border-black rounded-md"></input>
             </div>
             <div>
                 <lable for="Date">Enter the Date = </lable>
-                <input id="Title" type="date" onChange={ChangeDateHandler} ></input>
+                <input id="Title" type="date" onChange={ChangeDateHandler} value={Date} className="border-2 border-black rounded-md" ></input>
             </div>
             <button type="submit" className="relative bg-blue-600 text-white p-4 rounded-lg hover:text-xl">Add to Cards</button>
         </form>

@@ -27,11 +27,17 @@ function App() {
       Year: 201204
     }
   ];
+
+  function HandleLevel1(Data)
+  {
+    console.log("This is me shubham kumar");
+    console.log(Data);
+  }
   return (
     <>
       <NewForm></NewForm>
       <div className='realtive h-[100vh] w-[100vw] flex flex-row justify-center items-center'>
-        <DateCard AllValue={Obj}></DateCard>
+        <DateCard AllValue={Obj}  onCopy={HandleLevel1}></DateCard>
       </div>
     </>
   );
